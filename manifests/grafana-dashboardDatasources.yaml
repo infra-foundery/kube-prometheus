@@ -21,6 +21,15 @@ stringData:
                 "type": "prometheus",
                 "url": "http://prometheus-k8s.monitoring.svc:9090",
                 "version": 1
+            },
+            {
+                "access": "proxy",
+                "editable": false,
+                "name": "victorialogs",
+                "orgId": 1,
+                "type": "victoriametrics-logs-datasource",
+                "url": "http://victorialogs-victoria-logs-single-server.monitoring.svc:9428",
+                "version": 1
             }
         ]
     }
