@@ -11,5 +11,26 @@ metadata:
 stringData:
   grafana.ini: |
     [date_formats]
-    default_timezone = UTC
+    default_timezone = UTC+1
+
+    [server]
+    domain: grafana.kube.infrafoundry.com
+    root_url: 'https://%(domain)/'
+
+    # [auth]
+    # signout_redirect_url = https://authentik.company/application/o/<application_slug>/end-session/
+    # # Optionally enable auto-login
+    # oauth_auto_login = true
+
+    # [auth.generic_oauth]
+    # name = authentik
+    # enabled = true
+    # client_id = j2yVxQOPQ30eqlPRxux9XuruTdvIqzqOHJclh8NV
+    # client_secret = Ntnekgbz7RS6Fe4PxT3mxx74CEbtueJpPhxk05O4SveIVc5cURDncP8ySJq14kFGGz6IkvJ46VgF94J3f7fLyNU1yvyxqEmiceaBcL7VtYcfTxZbcOJvSpusbJfXWR1V
+    # scopes = openid email profile
+    # auth_url = https://authentik.company/application/o/authorize/
+    # token_url = https://authentik.company/application/o/token/
+    # api_url = https://authentik.company/application/o/userinfo/
+    # # Optionally map user groups to Grafana roles
+    # role_attribute_path = contains(groups, 'Grafana Admins') && 'Admin' || contains(groups, 'Grafana Editors') && 'Editor' || 'Viewer'
 type: Opaque
