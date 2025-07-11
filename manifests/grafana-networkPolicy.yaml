@@ -16,6 +16,7 @@ spec:
     - podSelector:
         matchLabels:
           app.kubernetes.io/name: prometheus
+          app.kubernetes.io/instance: ingress-nginx
     ports:
     - port: 3000
       protocol: TCP
@@ -24,6 +25,7 @@ spec:
       app.kubernetes.io/component: grafana
       app.kubernetes.io/name: grafana
       app.kubernetes.io/part-of: kube-prometheus
+      app.kubernetes.io/instance: ingress-nginx
   policyTypes:
   - Egress
   - Ingress
