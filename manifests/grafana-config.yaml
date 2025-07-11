@@ -14,8 +14,12 @@ stringData:
     default_timezone = UTC+1
 
     [server]
-    domain: grafana.kube.infrafoundry.com
-    root_url: 'https://%(domain)s/'
+    protocol = http
+    http_addr = 127.0.0.1
+    http_port = 3000
+    domain = "grafana.kube.infrafoundry.com"
+
+    root_url = %(protocol)s://%(domain)s:%(http_port)s/
 
     # [auth]
     # signout_redirect_url = https://authentik.company/application/o/<application_slug>/end-session/
