@@ -10,7 +10,7 @@ metadata:
   namespace: monitoring
 spec:
   egress:
-  - from:
+  - to:
     - podSelector:
         matchLabels:
           app.kubernetes.io/component: grafana
