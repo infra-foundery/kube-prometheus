@@ -15,7 +15,7 @@ stringData:
 
     [server]
     domain: grafana.kube.infrafoundry.com
-    root_url: 'https://%(domain)/'
+    root_url: 'https://%(domain)'
 
     # [auth]
     # signout_redirect_url = https://authentik.company/application/o/<application_slug>/end-session/
